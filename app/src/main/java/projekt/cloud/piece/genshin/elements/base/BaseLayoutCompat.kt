@@ -12,10 +12,11 @@ abstract class BaseLayoutCompat<out VB: ViewBinding>(private var _binding: VB?) 
 
     companion object {
 
-        inline fun <reified VB: ViewBinding, reified BLC: BaseLayoutCompat<VB>> VB.layoutCompat(context: Context) =
+        inline fun <reified VB: ViewBinding, reified BLC: BaseLayoutCompat<VB>> VB.layoutCompat(context: Context): BLC =
             BLC::class.java.getConstructor(VB::class.java).newInstance(this).getImpl(context)
 
-        fun <BLC: BaseLayoutCompat<*>> BLC.getImpl(context: Context): BLC {
+        fun <VB: ViewBinding, BLC: BaseLayoutCompat<VB>> BLC.getImpl(context: Context): BLC {
+            @Suppress("UNCHECKED_CAST")
             return when (context.screenDensity) {
                 COMPACT -> compatImpl
                 MEDIUM -> w600dpImpl
@@ -30,9 +31,9 @@ abstract class BaseLayoutCompat<out VB: ViewBinding>(private var _binding: VB?) 
 
     protected abstract val snackBarContainer: CoordinatorLayout
 
-    protected abstract val compatImpl: BaseLayoutCompat<*>
-    protected abstract val w600dpImpl: BaseLayoutCompat<*>
-    protected abstract val w1240dpImpl: BaseLayoutCompat<*>
+    protected abstract val compatImpl: BaseLayoutCompat<VB>
+    protected abstract val w600dpImpl: BaseLayoutCompat<VB>
+    protected abstract val w1240dpImpl: BaseLayoutCompat<VB>
 
     fun destroy() {
         _binding = null
