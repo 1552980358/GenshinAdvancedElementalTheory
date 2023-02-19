@@ -2,12 +2,13 @@ package projekt.cloud.piece.genshin.elements.base
 
 import android.content.Context
 import androidx.viewbinding.ViewBinding
+import java.io.Closeable
 import projekt.cloud.piece.genshin.elements.util.ScreenDensity.COMPACT
 import projekt.cloud.piece.genshin.elements.util.ScreenDensity.EXPANDED
 import projekt.cloud.piece.genshin.elements.util.ScreenDensity.MEDIUM
 import projekt.cloud.piece.genshin.elements.util.ScreenDensity.ScreenDensityUtil.screenDensity
 
-abstract class BaseLayoutCompat<out VB: ViewBinding> protected constructor(private var _binding: VB?) {
+abstract class BaseLayoutCompat<out VB: ViewBinding> protected constructor(private var _binding: VB?): Closeable {
 
     companion object {
 
@@ -32,7 +33,7 @@ abstract class BaseLayoutCompat<out VB: ViewBinding> protected constructor(priva
     protected abstract fun getW600dpImpl(binding: @UnsafeVariance VB): BaseLayoutCompat<VB>
     protected abstract fun getW1240dpImpl(binding: @UnsafeVariance VB): BaseLayoutCompat<VB>
 
-    fun destroy() {
+    override fun close() {
         _binding = null
     }
 
