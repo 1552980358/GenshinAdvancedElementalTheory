@@ -20,7 +20,10 @@ object FragmentLifecycleUtil {
     ): ReadWriteProperty<Fragment, T>, DefaultLifecycleObserver {
 
         init {
-            fragment.viewLifecycleOwner.lifecycle.addObserver(this)
+            fragment.viewLifecycleOwnerLiveData
+                .observe(fragment) { lifecycleOwner ->
+                    lifecycleOwner.lifecycle.addObserver(this)
+                }
         }
 
         private var _instance: T? = null
