@@ -9,17 +9,22 @@ import kotlin.reflect.KProperty
 
 object FragmentLifecycleUtil {
 
+    fun <T> Fragment.clearOnViewDestroy(): ReadWriteProperty<Fragment, T> =
+        ClearOnViewDestroyProperty(this)
+
     fun <T: Closeable> Fragment.closeOnViewDestroy(): ReadWriteProperty<Fragment, T> =
         CloseOnViewDestroyProperty(this)
 
-    private class CloseOnViewDestroyProperty<T>(fragment: Fragment): ReadWriteProperty<Fragment, T>, DefaultLifecycleObserver {
+    private open class ClearOnViewDestroyProperty<T>(
+        fragment: Fragment
+    ): ReadWriteProperty<Fragment, T>, DefaultLifecycleObserver {
 
         init {
             fragment.viewLifecycleOwner.lifecycle.addObserver(this)
         }
 
         private var _instance: T? = null
-        private val instance: T
+        protected val instance: T
             get() = _instance!!
 
         override fun onDestroy(owner: LifecycleOwner) {
@@ -30,6 +35,17 @@ object FragmentLifecycleUtil {
 
         override fun setValue(thisRef: Fragment, property: KProperty<*>, value: T) {
             _instance = value
+        }
+
+    }
+
+    private class CloseOnViewDestroyProperty<T: Closeable>(
+        fragment: Fragment
+    ): ClearOnViewDestroyProperty<T>(fragment) {
+
+        override fun onDestroy(owner: LifecycleOwner) {
+            instance.close()
+            super.onDestroy(owner)
         }
 
     }
