@@ -1,7 +1,6 @@
 package projekt.cloud.piece.genshin.elements.base
 
 import android.content.Context
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.viewbinding.ViewBinding
 import projekt.cloud.piece.genshin.elements.util.ScreenDensity.COMPACT
 import projekt.cloud.piece.genshin.elements.util.ScreenDensity.EXPANDED
@@ -28,8 +27,6 @@ abstract class BaseLayoutCompat<out VB: ViewBinding>(private var _binding: VB?) 
 
     protected val binding: VB
         get() = _binding!!
-
-    protected abstract val snackBarContainer: CoordinatorLayout
 
     protected abstract val compatImpl: BaseLayoutCompat<VB>
     protected abstract val w600dpImpl: BaseLayoutCompat<VB>

@@ -8,9 +8,6 @@ open class HomeLayoutCompat(
     binding: FragmentHomeBinding
 ): BaseLayoutCompat<FragmentHomeBinding>(binding) {
 
-    override val snackBarContainer: CoordinatorLayout
-        get() = binding.coordinatorLayout
-
     override val compatImpl: HomeLayoutCompat
         get() = HomeLayoutCompatImpl(binding)
 
