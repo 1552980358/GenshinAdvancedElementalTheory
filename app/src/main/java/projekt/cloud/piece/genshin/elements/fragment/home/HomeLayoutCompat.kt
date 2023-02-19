@@ -4,23 +4,24 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import projekt.cloud.piece.genshin.elements.base.BaseLayoutCompat
 import projekt.cloud.piece.genshin.elements.databinding.FragmentHomeBinding
 
-open class HomeLayoutCompat(
-    binding: FragmentHomeBinding
-): BaseLayoutCompat<FragmentHomeBinding>(binding) {
+open class HomeLayoutCompat: BaseLayoutCompat<FragmentHomeBinding> {
 
-    override val compatImpl: HomeLayoutCompat
-        get() = HomeLayoutCompatImpl(binding)
+    constructor(): super(null)
+    constructor(binding: FragmentHomeBinding): super(binding)
 
-    override val w600dpImpl: HomeLayoutCompat
-        get() = HomeLayoutCompatW600dpImpl(binding)
+    override fun getCompatImpl(binding: FragmentHomeBinding): HomeLayoutCompat =
+        CompatImpl(binding)
 
-    override val w1240dpImpl: HomeLayoutCompat
-        get() = HomeLayoutCompatW1240dpImpl(binding)
+    override fun getW600dpImpl(binding: FragmentHomeBinding): HomeLayoutCompat =
+        W600dpImpl(binding)
 
-    private class HomeLayoutCompatImpl(binding: FragmentHomeBinding): HomeLayoutCompat(binding)
+    override fun getW1240dpImpl(binding: FragmentHomeBinding): HomeLayoutCompat =
+        W1240dpImpl(binding)
 
-    private class HomeLayoutCompatW600dpImpl(binding: FragmentHomeBinding): HomeLayoutCompat(binding)
+    private class CompatImpl(binding: FragmentHomeBinding): HomeLayoutCompat(binding)
 
-    private class HomeLayoutCompatW1240dpImpl(binding: FragmentHomeBinding): HomeLayoutCompat(binding)
+    private class W600dpImpl(binding: FragmentHomeBinding): HomeLayoutCompat(binding)
+
+    private class W1240dpImpl(binding: FragmentHomeBinding): HomeLayoutCompat(binding)
 
 }
