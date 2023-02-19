@@ -11,13 +11,13 @@ open class HomeLayoutCompat(
     override val snackBarContainer: CoordinatorLayout
         get() = binding.coordinatorLayout
 
-    override val compatImpl: BaseLayoutCompat<*>
+    override val compatImpl: HomeLayoutCompat
         get() = HomeLayoutCompatImpl(binding)
 
-    override val w600dpImpl: BaseLayoutCompat<*>
+    override val w600dpImpl: HomeLayoutCompat
         get() = HomeLayoutCompatW600dpImpl(binding)
 
-    override val w1240dpImpl: BaseLayoutCompat<*>
+    override val w1240dpImpl: HomeLayoutCompat
         get() = HomeLayoutCompatW1240dpImpl(binding)
 
     private class HomeLayoutCompatImpl(binding: FragmentHomeBinding): HomeLayoutCompat(binding)
