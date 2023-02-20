@@ -1,15 +1,9 @@
 package projekt.cloud.piece.genshin.elements
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
+import androidx.activity.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import projekt.cloud.piece.genshin.elements.databinding.ActivityMainBinding
@@ -27,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         navController = binding.fragmentContainerView
             .getFragment<NavHostFragment>()
             .navController
+
+        val mainViewModel: MainViewModel by viewModels()
+        mainViewModel.obtainSystemInsets(window.decorView)
     }
 
     override fun onSupportNavigateUp(): Boolean {
