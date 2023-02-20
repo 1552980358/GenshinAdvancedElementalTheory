@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import projekt.cloud.piece.genshin.elements.util.FragmentLifecycleUtil.clearOnViewDestroy
@@ -21,7 +22,11 @@ abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>(
         private set
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = viewBindingClass.inflate(inflater, container)
+        binding = viewBindingClass.inflate<VB>(inflater, container).also { viewBinding ->
+            if (viewBinding is ViewDataBinding) {
+                viewBinding.lifecycleOwner = viewLifecycleOwner
+            }
+        }
         layoutCompat = onCreateLayoutCompat(binding)
         return binding.root
     }
