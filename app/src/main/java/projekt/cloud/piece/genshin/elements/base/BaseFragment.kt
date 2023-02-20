@@ -17,11 +17,12 @@ abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>(
     protected var binding: @UnsafeVariance VB by clearOnViewDestroy()
         private set
 
-    private var _layoutCompat: @UnsafeVariance LC by closeOnViewDestroy()
+    protected var layoutCompat: @UnsafeVariance LC by closeOnViewDestroy()
+        private set
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = viewBindingClass.inflate(inflater, container)
-        _layoutCompat = onCreateLayoutCompat(binding)
+        layoutCompat = onCreateLayoutCompat(binding)
         return binding.root
     }
 
