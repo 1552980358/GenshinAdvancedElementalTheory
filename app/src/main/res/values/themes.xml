@@ -4,6 +4,10 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="materialCardViewStyle">?attr/materialCardViewFilledStyle</item>
+
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="s">?attr/isLightTheme</item>
     </style>
 
     <style name="Theme.GenshinAdvancedElementalTheory" parent="Base.Theme.GenshinAdvancedElementalTheory" />
