@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="@layout/fragment_elemental_amount">
+
+    <data>
+        <variable
+            name="timer"
+            type="Integer" />
+        <variable
+            name="weakAmount"
+            type="Integer" />
+        <variable
+            name="strongAmount"
+            type="Integer" />
+        <variable
+            name="superAmount"
+            type="Integer" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+        android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/elemental_amount_unit_decay_title"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/elemental_amount_unit_decay_body"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+                android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/elemental_amount_unit_decay_weak_title"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/elemental_amount_unit_decay_weak_body(weakAmount / 10, weakAmount % 10)}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/linear_progress_indicator_weak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="@integer/element_amount_count_down_max"
+                    android:progress="@integer/element_amount_count_down_weak" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/elemental_amount_unit_decay_strong_title"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/elemental_amount_unit_decay_strong_body(strongAmount / 10, strongAmount % 10)}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/linear_progress_indicator_strong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="@integer/element_amount_count_down_max"
+                    android:progress="@integer/element_amount_count_down_strong" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/elemental_amount_unit_decay_super_title"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/elemental_amount_unit_decay_super_body(superAmount / 10, superAmount % 10)}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/linear_progress_indicator_super"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="@integer/element_amount_count_down_max"
+                    android:progress="@integer/element_amount_count_down_super" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/elemental_amount_unit_decay_timer(timer)}" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/app_compat_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_round_warning_amber_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="@dimen/constraint_fill"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/md_spec_spacing_hor_16"
+                android:text="@string/elemental_amount_unit_decay_caution"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/app_compat_image_view"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

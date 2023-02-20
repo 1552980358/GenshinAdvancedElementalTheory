@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">Genshin - Advanced Elemental Theory</string>
+    <string name="app_name">Genshin：Advanced Elemental Theory</string>
+    
+    <string name="navigation_pre_title">Pre-basic knowledge</string>
+    <string name="navigation_pre_unit" translatable="false">@string/elemental_amount_unit_title</string>
+    <string name="navigation_pre_attach">Elemental Attachment Mechanism</string>
+
+    <string name="element_attachment_weak">Weak Element Attachment</string>
+    <string name="element_attachment_strong">Strong Element Attachment</string>
+    <string name="element_attachment_super">Super Element Attachment</string>
+
+    <string name="elemental_amount_unit_title">Elemental Measurement Unit</string>
+    <string name="elemental_amount_unit_unit_title">Measurement Unit</string>
+    <string name="elemental_amount_unit_unit_body">In Genshin Impact elements system, there is no official elemental measurement unit for determining amount of element, like <b><i>mol</i></b> in chemistry in real life.\nSo, we consider using <b><i>Element Unit (EU)</i></b> as the measurement unit by dividing weak elemental attachment into 100 equal pieces, and thus weak elemental attachment is <b><i>100EU</i></b>.</string>
+    <string name="elemental_amount_unit_amount_title">Elemental Amount Attached</string>
+    <string name="elemental_amount_unit_amount_body">There are 3 types of element attached amount to target available, <b><i>Weak</i></b>, <b><i>Strong</i></b> and <b><i>Super</i></b>, in ratio <b><i>1:2:4</i></b>.</string>
+    <string name="elemental_amount_unit_amount_weak_title" translatable="false">@string/element_attachment_weak</string>
+    <string name="elemental_amount_unit_amount_weak_body" translatable="false"><b><i>100 EU</i></b></string>
+    <string name="elemental_amount_unit_amount_strong_title" translatable="false">@string/element_attachment_strong</string>
+    <string name="elemental_amount_unit_amount_strong_body" translatable="false"><b><i>200 EU</i></b></string>
+    <string name="elemental_amount_unit_amount_super_title" translatable="false">@string/element_attachment_super</string>
+    <string name="elemental_amount_unit_amount_super_body" translatable="false"><b><i>400 EU</i></b></string>
+    <string name="elemental_amount_unit_decay_title">Decay Rate</string>
+    <string name="elemental_amount_unit_decay_body">In normal case, element attached to target has corresponding constant decay rate in <b><i>energy units per second (EU/s)</i></b> until disappear (<b><i>0 EU</i></b>).</string>
+    <string name="elemental_amount_unit_decay_weak_title" translatable="false">@string/element_attachment_weak</string>
+    <string name="elemental_amount_unit_decay_weak_body">%d.%d EU, decay in 8 EU/s</string>
+    <string name="elemental_amount_unit_decay_strong_title" translatable="false">@string/element_attachment_strong</string>
+    <string name="elemental_amount_unit_decay_strong_body">%d.%d EU, decay in 13 EU/s</string>
+    <string name="elemental_amount_unit_decay_super_title" translatable="false">@string/element_attachment_super</string>
+    <string name="elemental_amount_unit_decay_super_body">%d.%d EU, decay in 19 EU/s</string>
+    <string name="elemental_amount_unit_decay_timer">Timer: %ds</string>
+    <string name="elemental_amount_unit_decay_caution">The actual element amount attached to target and decay time spent in game is not exactly the same as shown here. Of course, it will be discussed in later character.</string>
+
 </resources>
