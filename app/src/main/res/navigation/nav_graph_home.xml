@@ -11,4 +11,9 @@
         android:name="projekt.cloud.piece.genshin.elements.fragment.navigation.NavigationFragment"
         tools:layout="@layout/fragment_navigation" />
 
+    <fragment
+        android:id="@+id/elemental_amount"
+        android:name="projekt.cloud.piece.genshin.elements.fragment.elementalAmount.ElementalAmountFragment"
+        tools:layout="@layout/fragment_elemental_amount" />
+
 </navigation>
