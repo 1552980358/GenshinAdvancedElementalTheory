@@ -10,7 +10,7 @@ private typealias HomeBaseFragment = BaseFragment<FragmentHomeBinding, HomeLayou
 
 class HomeFragment: HomeBaseFragment() {
 
-    override val viewBindingClass: Class<out FragmentHomeBinding>
+    override val viewBindingClass: Class<FragmentHomeBinding>
         get() = FragmentHomeBinding::class.java
 
     override fun onCreateLayoutCompat(binding: FragmentHomeBinding): HomeLayoutCompat =

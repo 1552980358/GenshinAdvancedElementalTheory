@@ -11,14 +11,14 @@ import projekt.cloud.piece.genshin.elements.util.FragmentLifecycleUtil.clearOnVi
 import projekt.cloud.piece.genshin.elements.util.FragmentLifecycleUtil.closeOnViewDestroy
 import projekt.cloud.piece.genshin.elements.util.ViewBindingReflector.LayoutBindingReflectorUtil.inflate
 
-abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>: Fragment() {
+abstract class BaseFragment<VB: ViewBinding, LC: BaseLayoutCompat<VB>>: Fragment() {
 
-    protected abstract val viewBindingClass: Class<out VB>
+    protected abstract val viewBindingClass: Class<VB>
 
-    protected var binding: @UnsafeVariance VB by clearOnViewDestroy()
+    protected var binding: VB by clearOnViewDestroy()
         private set
 
-    protected var layoutCompat: @UnsafeVariance LC by closeOnViewDestroy()
+    protected var layoutCompat:LC by closeOnViewDestroy()
         private set
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -32,8 +32,8 @@ abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>: 
         return binding.root
     }
 
-    protected abstract fun onCreateLayoutCompat(binding: @UnsafeVariance VB): LC
+    protected abstract fun onCreateLayoutCompat(binding: VB): LC
 
-    protected open fun onSetupViewData(binding: @UnsafeVariance VB) = Unit
+    protected open fun onSetupViewData(binding: VB) = Unit
 
 }

@@ -12,7 +12,7 @@ private typealias BaseElementalAmountUnitFragment = BaseFragment<FragmentElement
 
 class ElementalAmountFragment: BaseElementalAmountUnitFragment() {
 
-    override val viewBindingClass: Class<out FragmentElementalAmountBinding>
+    override val viewBindingClass: Class<FragmentElementalAmountBinding>
         get() = FragmentElementalAmountBinding::class.java
 
     override fun onCreateLayoutCompat(binding: FragmentElementalAmountBinding): ElementalAmountLayoutCompat =

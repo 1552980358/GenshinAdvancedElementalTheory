@@ -8,7 +8,7 @@ private typealias BaseNavigationFragment = BaseFragment<FragmentNavigationBindin
 
 class NavigationFragment: BaseNavigationFragment() {
 
-    override val viewBindingClass: Class<out FragmentNavigationBinding>
+    override val viewBindingClass: Class<FragmentNavigationBinding>
         get() = FragmentNavigationBinding::class.java
 
     override fun onCreateLayoutCompat(binding: FragmentNavigationBinding): NavigationLayoutCompat =
