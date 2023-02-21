@@ -25,6 +25,7 @@ abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>(
         binding = viewBindingClass.inflate<VB>(inflater, container).also { viewBinding ->
             if (viewBinding is ViewDataBinding) {
                 viewBinding.lifecycleOwner = viewLifecycleOwner
+                onSetupViewData(viewBinding)
             }
         }
         layoutCompat = onCreateLayoutCompat(binding)
@@ -32,5 +33,7 @@ abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>(
     }
 
     protected abstract fun onCreateLayoutCompat(binding: @UnsafeVariance VB): LC
+
+    protected open fun onSetupViewData(binding: @UnsafeVariance VB) = Unit
 
 }
