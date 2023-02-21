@@ -29,6 +29,6 @@
     <string name="elemental_amount_unit_decay_super_title" translatable="false">@string/element_attachment_super</string>
     <string name="elemental_amount_unit_decay_super_body">%d.%d EU, decay in 19 EU/s</string>
     <string name="elemental_amount_unit_decay_timer">Timer: %ds</string>
-    <string name="elemental_amount_unit_decay_caution">The actual element amount attached to target and decay time spent in game is not exactly the same as shown here. Of course, it will be discussed in later character.</string>
+    <string name="elemental_amount_unit_decay_caution">The actual element amount attached to target and decay time spent in game is not exactly the same as shown here. Of course, it will be discussed in later chapter.</string>
 
 </resources>
