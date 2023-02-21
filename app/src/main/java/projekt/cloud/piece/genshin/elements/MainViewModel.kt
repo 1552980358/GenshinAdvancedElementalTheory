@@ -10,19 +10,14 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel: ViewModel() {
 
-    private val _systemInsets = MutableLiveData(Rect())
+    private val _systemInsets = MutableLiveData<Rect>()
     val systemInsets: LiveData<Rect>
         get() = _systemInsets
 
     fun obtainSystemInsets(decorView: View) {
         ViewCompat.setOnApplyWindowInsetsListener(decorView) { _, windowInsetsCompat ->
             windowInsetsCompat.getInsets(Type.systemBars()).let { insets ->
-                _systemInsets.value?.let { rect ->
-                    rect.top = insets.top
-                    rect.left = insets.left
-                    rect.right = insets.right
-                    rect.bottom = insets.bottom
-                }
+                _systemInsets.value = Rect(insets.left, insets.top, insets.right, insets.bottom)
             }
             return@setOnApplyWindowInsetsListener windowInsetsCompat
         }
