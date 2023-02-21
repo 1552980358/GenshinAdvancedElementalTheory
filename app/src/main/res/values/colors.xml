@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- wind -->
+    <color name="color_anemo">#75C3A9</color>
+    <!-- plant -->
+    <color name="color_dendro">#A6C938</color>
+    <!-- ice -->
+    <color name="color_cryo">#A0d7E4</color>
+    <!-- fire -->
+    <color name="color_pyro">#EF7A35</color>
+    <!-- thunder -->
+    <color name="color_electro">#B08FC2</color>
+    <!-- rock -->
+    <color name="color_geo">#F9B72E</color>
+    <!-- water -->
+    <color name="color_hydro">#4BC3F1</color>
+
 </resources>
