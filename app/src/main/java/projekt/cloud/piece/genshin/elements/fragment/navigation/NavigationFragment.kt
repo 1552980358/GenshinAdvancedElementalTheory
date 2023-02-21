@@ -4,7 +4,12 @@ import projekt.cloud.piece.genshin.elements.base.BaseFragment
 import projekt.cloud.piece.genshin.elements.base.BaseLayoutCompat.Companion.layoutCompat
 import projekt.cloud.piece.genshin.elements.databinding.FragmentNavigationBinding
 
-class NavigationFragment: BaseFragment<FragmentNavigationBinding, NavigationLayoutCompat>(FragmentNavigationBinding::class.java) {
+private typealias BaseNavigationFragment = BaseFragment<FragmentNavigationBinding, NavigationLayoutCompat>
+
+class NavigationFragment: BaseNavigationFragment() {
+
+    override val viewBindingClass: Class<out FragmentNavigationBinding>
+        get() = FragmentNavigationBinding::class.java
 
     override fun onCreateLayoutCompat(binding: FragmentNavigationBinding): NavigationLayoutCompat =
         binding.layoutCompat(requireContext())

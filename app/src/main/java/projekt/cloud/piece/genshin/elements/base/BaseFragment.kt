@@ -11,9 +11,9 @@ import projekt.cloud.piece.genshin.elements.util.FragmentLifecycleUtil.clearOnVi
 import projekt.cloud.piece.genshin.elements.util.FragmentLifecycleUtil.closeOnViewDestroy
 import projekt.cloud.piece.genshin.elements.util.ViewBindingReflector.LayoutBindingReflectorUtil.inflate
 
-abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>(
-    private val viewBindingClass: Class<VB>
-): Fragment() {
+abstract class BaseFragment<out VB: ViewBinding, out LC: BaseLayoutCompat<VB>>: Fragment() {
+
+    protected abstract val viewBindingClass: Class<out VB>
 
     protected var binding: @UnsafeVariance VB by clearOnViewDestroy()
         private set
