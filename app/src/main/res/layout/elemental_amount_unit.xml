@@ -12,13 +12,13 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/elemental_amount_unit_title"
+        android:text="@string/elemental_amount_title"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/elemental_amount_unit_unit_body"
+        android:text="@string/elemental_amount_unit_body"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

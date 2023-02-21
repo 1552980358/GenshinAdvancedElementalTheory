@@ -30,13 +30,13 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/elemental_amount_unit_decay_title"
+            android:text="@string/elemental_amount_decay_title"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/elemental_amount_unit_decay_body"
+            android:text="@string/elemental_amount_decay_body"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
         <com.google.android.material.card.MaterialCardView
@@ -54,13 +54,13 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/elemental_amount_unit_decay_weak_title"
+                    android:text="@string/elemental_amount_decay_weak_title"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/elemental_amount_unit_decay_weak_body(weakAmount / 10, weakAmount % 10)}"
+                    android:text="@{@string/elemental_amount_decay_weak_body(weakAmount / 10, weakAmount % 10)}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
                 <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -73,13 +73,13 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/elemental_amount_unit_decay_strong_title"
+                    android:text="@string/elemental_amount_decay_strong_title"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/elemental_amount_unit_decay_strong_body(strongAmount / 10, strongAmount % 10)}"
+                    android:text="@{@string/elemental_amount_decay_strong_body(strongAmount / 10, strongAmount % 10)}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
                 <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -92,13 +92,13 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/elemental_amount_unit_decay_super_title"
+                    android:text="@string/elemental_amount_decay_super_title"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/elemental_amount_unit_decay_super_body(superAmount / 10, superAmount % 10)}"
+                    android:text="@{@string/elemental_amount_decay_super_body(superAmount / 10, superAmount % 10)}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
                 <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -111,7 +111,7 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/elemental_amount_unit_decay_timer(timer)}" />
+                    android:text="@{@string/elemental_amount_decay_timer(timer)}" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -134,7 +134,7 @@
                 android:layout_width="@dimen/constraint_fill"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/md_spec_spacing_hor_16"
-                android:text="@string/elemental_amount_unit_decay_caution"
+                android:text="@string/elemental_amount_decay_caution"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -8,17 +8,17 @@
     <string name="element_attachment_strong">强元素</string>
     <string name="element_attachment_super">超强元素</string>
 
-    <string name="elemental_amount_unit_title">元素计量单位</string>
-    <string name="elemental_amount_unit_unit_title">计量单位</string>
-    <string name="elemental_amount_unit_unit_body">关于原神元素系统，元素值(暂时)并没有像现实中类似<b><i>摩尔(mol)</i></b>这样的可量化单位。所以我们暂且以弱元素为基础，定义<b><i>Energy Unit (EU)</i></b>作为计量元素量单位，拆分成100等分，因此弱元素有<b><i>100EU</i></b>的元素量。</string>
-    <string name="elemental_amount_unit_amount_title">元素量附着</string>
-    <string name="elemental_amount_unit_amount_body">原神总共有三种元素量附着<b><i>弱元素</i></b>, <b><i>强元素</i></b>和<b><i>超强元素</i></b>, 各比例为<b><i>1:2:4</i></b>。</string>
-    <string name="elemental_amount_unit_decay_title">衰变率</string>
-    <string name="elemental_amount_unit_decay_body">正常情况下，元素附着量都会以特定衰变率 <b><i>EU每秒 (EU/s)</i></b> 减低直至消失(<b><i>(0 EU)</i></b>)</string>
-    <string name="elemental_amount_unit_decay_weak_body">%d.%d EU，衰变率：8 EU/s</string>
-    <string name="elemental_amount_unit_decay_strong_body">%d.%d  EU，衰变率：13 EU/s</string>
-    <string name="elemental_amount_unit_decay_super_body">%d.%d EU，衰变率：19 EU/s</string>
-    <string name="elemental_amount_unit_decay_timer">计时：%d秒</string>
-    <string name="elemental_amount_unit_decay_caution">此处展示的元素量与衰变用时与实际游戏并不完全相等。当然，此问题将会在后续内容中提及。</string>
+    <string name="elemental_amount_title">元素计量单位</string>
+    <string name="elemental_amount_unit_title">计量单位</string>
+    <string name="elemental_amount_unit_body">关于原神元素系统，元素值(暂时)并没有像现实中类似<b><i>摩尔(mol)</i></b>这样的可量化单位。所以我们暂且以弱元素为基础，定义<b><i>Energy Unit (EU)</i></b>作为计量元素量单位，拆分成100等分，因此弱元素有<b><i>100EU</i></b>的元素量。</string>
+    <string name="elemental_amount_amount_title">元素量附着</string>
+    <string name="elemental_amount_amount_body">原神总共有三种元素量附着<b><i>弱元素</i></b>, <b><i>强元素</i></b>和<b><i>超强元素</i></b>, 各比例为<b><i>1:2:4</i></b>。</string>
+    <string name="elemental_amount_decay_title">衰变率</string>
+    <string name="elemental_amount_decay_body">正常情况下，元素附着量都会以特定衰变率 <b><i>EU每秒 (EU/s)</i></b> 减低直至消失(<b><i>(0 EU)</i></b>)</string>
+    <string name="elemental_amount_decay_weak_body">%d.%d EU，衰变率：8 EU/s</string>
+    <string name="elemental_amount_decay_strong_body">%d.%d  EU，衰变率：13 EU/s</string>
+    <string name="elemental_amount_decay_super_body">%d.%d EU，衰变率：19 EU/s</string>
+    <string name="elemental_amount_decay_timer">计时：%d秒</string>
+    <string name="elemental_amount_decay_caution">此处展示的元素量与衰变用时与实际游戏并不完全相等。当然，此问题将会在后续内容中提及。</string>
 
 </resources>

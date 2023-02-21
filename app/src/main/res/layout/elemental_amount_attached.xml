@@ -12,13 +12,13 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/elemental_amount_unit_amount_title"
+        android:text="@string/elemental_amount_amount_title"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/elemental_amount_unit_amount_body"
+        android:text="@string/elemental_amount_amount_body"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
     <com.google.android.material.card.MaterialCardView
@@ -36,13 +36,13 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/elemental_amount_unit_amount_weak_title"
+                android:text="@string/elemental_amount_amount_weak_title"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/elemental_amount_unit_amount_weak_body"
+                android:text="@string/elemental_amount_amount_weak_body"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -70,13 +70,13 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/elemental_amount_unit_amount_strong_title"
+                android:text="@string/elemental_amount_amount_strong_title"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/elemental_amount_unit_amount_strong_body"
+                android:text="@string/elemental_amount_amount_strong_body"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -104,13 +104,13 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/elemental_amount_unit_amount_super_title"
+                android:text="@string/elemental_amount_amount_super_title"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/elemental_amount_unit_amount_super_body"
+                android:text="@string/elemental_amount_amount_super_body"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
