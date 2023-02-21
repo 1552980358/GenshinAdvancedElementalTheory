@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <data>
+        <import type="projekt.cloud.piece.genshin.elements.MainViewModel" />
+        <variable
+            name="mainViewModel"
+            type="MainViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <include layout="@layout/elemental_amount_unit" />
-
-        <com.google.android.material.divider.MaterialDivider
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <include layout="@layout/elemental_amount_attached" />
+            <include layout="@layout/elemental_amount_unit" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <include
-            android:id="@+id/elemental_amount_decay"
-            layout="@layout/elemental_amount_decay" />
+            <include layout="@layout/elemental_amount_attached" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-</androidx.core.widget.NestedScrollView>
+            <include
+                android:id="@+id/elemental_amount_decay"
+                layout="@layout/elemental_amount_decay" />
+
+            <projekt.cloud.piece.genshin.elements.widget.InsetView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inset_vertical="@{mainViewModel.systemInsets.bottom}" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
