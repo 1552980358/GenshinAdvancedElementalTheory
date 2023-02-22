@@ -27,7 +27,8 @@ class ValueBar(context: Context, attributeSet: AttributeSet): View(context, attr
     private val secondaryValue: Int
     private val maxValue: Int
 
-    private var drawValue: Int
+    var drawValue: Int
+        private set
 
     private val primaryPaint = Paint().apply {
         isAntiAlias = true
