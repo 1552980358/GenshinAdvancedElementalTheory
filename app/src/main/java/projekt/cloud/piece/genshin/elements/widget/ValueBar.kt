@@ -1,7 +1,6 @@
 package projekt.cloud.piece.genshin.elements.widget
 
 import android.animation.Animator
-import android.animation.Animator.AnimatorListener
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Canvas
@@ -12,6 +11,7 @@ import android.util.TypedValue
 import android.view.View
 import android.view.View.MeasureSpec.EXACTLY
 import android.view.View.MeasureSpec.UNSPECIFIED
+import android.view.animation.LinearInterpolator
 import androidx.core.animation.doOnEnd
 import kotlin.math.min
 import projekt.cloud.piece.genshin.elements.R
@@ -130,6 +130,7 @@ class ValueBar(context: Context, attributeSet: AttributeSet): View(context, attr
         animator = ValueAnimator.ofInt(primaryValue, 0)
             .setDuration(valueDuration)
             .apply {
+                interpolator = LinearInterpolator()
                 addUpdateListener {
                     drawValue = it.animatedValue as Int
                     invalidate()
@@ -147,6 +148,7 @@ class ValueBar(context: Context, attributeSet: AttributeSet): View(context, attr
         animator = ValueAnimator.ofInt(drawValue, primaryValue)
             .setDuration(resetDuration)
             .apply {
+                interpolator = LinearInterpolator()
                 addUpdateListener {
                     drawValue = it.animatedValue as Int
                     invalidate()
