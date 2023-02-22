@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="value_bar_height_default">4dp</dimen>
+    <integer name="value_bar_value_duration_def">400</integer>
+    <integer name="value_bar_reset_duration_def">200</integer>
+    <integer name="value_bar_primary_value_def">1</integer>
+    <integer name="value_bar_secondary_value_def">-1</integer>
+    <integer name="value_bar_max_value_def">1</integer>
+    <declare-styleable name="ValueBar">
+        <attr name="maxValue" format="integer" />
+        <attr name="primaryValue" format="integer" />
+        <attr name="secondaryValue" format="integer" />
+
+        <attr name="valueDuration" format="integer" />
+        <attr name="resetDuration" format="integer" />
+    </declare-styleable>
+
+</resources>
