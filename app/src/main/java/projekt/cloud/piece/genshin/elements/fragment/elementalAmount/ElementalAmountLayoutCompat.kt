@@ -1,18 +1,16 @@
 package projekt.cloud.piece.genshin.elements.fragment.elementalAmount
 
-import android.content.res.Resources
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.progressindicator.LinearProgressIndicator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
-import projekt.cloud.piece.genshin.elements.R
 import projekt.cloud.piece.genshin.elements.base.BaseLayoutCompat
 import projekt.cloud.piece.genshin.elements.databinding.ElementalAmountDecayBinding
 import projekt.cloud.piece.genshin.elements.databinding.FragmentElementalAmountBinding
 import projekt.cloud.piece.genshin.elements.util.CoroutineUtil.default
 import projekt.cloud.piece.genshin.elements.util.CoroutineUtil.main
+import projekt.cloud.piece.genshin.elements.widget.ValueBar
 
 open class ElementalAmountLayoutCompat: BaseLayoutCompat<FragmentElementalAmountBinding> {
 
@@ -20,8 +18,7 @@ open class ElementalAmountLayoutCompat: BaseLayoutCompat<FragmentElementalAmount
         const val DECAY_DELAY_INTERVAL = 100L
         const val DECAY_DELAY_RESET = 1000L
         const val DECAY_DELAY_COMPLETE = 2000L
-        const val DECAY_REPEAT = 212
-        const val DECAY_MIN_ELEMENT_AMOUNT = 0
+        const val DECAY_REPEAT = 220
     }
 
     constructor(): super(null)
@@ -44,69 +41,49 @@ open class ElementalAmountLayoutCompat: BaseLayoutCompat<FragmentElementalAmount
 
     private val decay: ElementalAmountDecayBinding
         get() = binding.elementalAmountDecay
-    private val weak: LinearProgressIndicator
-        get() = decay.linearProgressIndicatorWeak
-    private val strong: LinearProgressIndicator
-        get() = decay.linearProgressIndicatorStrong
-    private val `super`: LinearProgressIndicator
-        get() = decay.linearProgressIndicatorSuper
+    private val weak: ValueBar
+        get() = decay.valueBarWeak
+    private val strong: ValueBar
+        get() = decay.valueBarStrong
+    private val `super`: ValueBar
+        get() = decay.valueBarSuper
 
     private var job: Job? = null
 
     fun setupElementAmountCountdown(fragment: Fragment) {
-        beginDecayCountdown(fragment.lifecycleScope, fragment.resources)
+        beginDecayCountdown(fragment.lifecycleScope)
     }
 
-    private fun beginDecayCountdown(coroutineScope: CoroutineScope, resources: Resources) {
+    private fun beginDecayCountdown(coroutineScope: CoroutineScope) {
         job?.cancel()
         job = coroutineScope.default {
-            val weakMax = resources.getInteger(R.integer.element_amount_count_down_weak)
-            val strongMax = resources.getInteger(R.integer.element_amount_count_down_strong)
-            val superMax = resources.getInteger(R.integer.element_amount_count_down_super)
-
-            val weakDecay = resources.getInteger(R.integer.element_decay_weak)
-            val strongDecay = resources.getInteger(R.integer.element_decay_strong)
-            val superDecay = resources.getInteger(R.integer.element_decay_super)
-
-            var weakAmount: Int
-            var strongAmount: Int
-            var superAmount: Int
-
-            delay(DECAY_DELAY_COMPLETE)
-
             while (true) {
-                repeat(DECAY_REPEAT) { count ->
-                    delay(DECAY_DELAY_INTERVAL)
-
-                    decay.timer = count / 10
-
-                    weakAmount = getEnergyUnit(weakMax, weakDecay, count)
-                    decay.weakAmount = weakAmount
-
-                    strongAmount = getEnergyUnit(strongMax, strongDecay, count)
-                    decay.strongAmount = strongAmount
-
-                    superAmount = getEnergyUnit(superMax, superDecay, count)
-                    decay.superAmount = superAmount
-
-                    main {
-                        weak.setProgressCompat(weakAmount, true)
-                        strong.setProgressCompat(strongAmount, true)
-                        `super`.setProgressCompat(superAmount, true)
-                    }
-
-                    if (count == 0) {
-                        delay(DECAY_DELAY_RESET)
-                    }
+                main {
+                    weak.startCountdown()
+                    strong.startCountdown()
+                    `super`.startCountdown()
                 }
 
+                repeat(DECAY_REPEAT) { count ->
+                    delay(DECAY_DELAY_INTERVAL)
+                    main {
+                        decay.timer = count / 10
+                        decay.weakAmount = weak.drawValue
+                        decay.strongAmount = strong.drawValue
+                        decay.superAmount = `super`.drawValue
+                    }
+                }
                 delay(DECAY_DELAY_COMPLETE)
+
+                main {
+                    weak.startReset()
+                    strong.startReset()
+                    `super`.startReset()
+                }
+                delay(DECAY_DELAY_RESET)
             }
         }
     }
-
-    private fun getEnergyUnit(max: Int, decay: Int, repeat: Int) =
-        (max - repeat * decay).takeIf { it > DECAY_MIN_ELEMENT_AMOUNT } ?: DECAY_MIN_ELEMENT_AMOUNT
 
     override fun close() {
         job?.cancel()

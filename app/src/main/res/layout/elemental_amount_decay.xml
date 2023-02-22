@@ -60,15 +60,17 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/elemental_amount_decay_weak_body(weakAmount / 10, weakAmount % 10)}"
+                    android:text="@{@string/elemental_amount_decay_weak_body(weakAmount)}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
-                <com.google.android.material.progressindicator.LinearProgressIndicator
-                    android:id="@+id/linear_progress_indicator_weak"
+                <projekt.cloud.piece.genshin.elements.widget.ValueBar
+                    android:id="@+id/value_bar_weak"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:max="@integer/element_amount_count_down_max"
-                    android:progress="@integer/element_amount_count_down_weak" />
+                    app:maxValue="@integer/element_amount_max"
+                    app:primaryValue="@integer/element_amount_weak"
+                    app:secondaryValue="@integer/element_amount_weak"
+                    app:valueDuration="@integer/element_decay_time_weak" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
@@ -79,15 +81,17 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/elemental_amount_decay_strong_body(strongAmount / 10, strongAmount % 10)}"
+                    android:text="@{@string/elemental_amount_decay_strong_body(strongAmount)}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
-                <com.google.android.material.progressindicator.LinearProgressIndicator
-                    android:id="@+id/linear_progress_indicator_strong"
+                <projekt.cloud.piece.genshin.elements.widget.ValueBar
+                    android:id="@+id/value_bar_strong"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:max="@integer/element_amount_count_down_max"
-                    android:progress="@integer/element_amount_count_down_strong" />
+                    app:maxValue="@integer/element_amount_max"
+                    app:primaryValue="@integer/element_amount_strong"
+                    app:secondaryValue="@integer/element_amount_strong"
+                    app:valueDuration="@integer/element_decay_time_strong" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
@@ -98,15 +102,17 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/elemental_amount_decay_super_body(superAmount / 10, superAmount % 10)}"
+                    android:text="@{@string/elemental_amount_decay_super_body(superAmount)}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
-                <com.google.android.material.progressindicator.LinearProgressIndicator
-                    android:id="@+id/linear_progress_indicator_super"
+                <projekt.cloud.piece.genshin.elements.widget.ValueBar
+                    android:id="@+id/value_bar_super"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:max="@integer/element_amount_count_down_max"
-                    android:progress="@integer/element_amount_count_down_super" />
+                    app:maxValue="@integer/element_amount_max"
+                    app:primaryValue="@integer/element_amount_super"
+                    app:secondaryValue="@integer/element_amount_super"
+                    app:valueDuration="@integer/element_decay_time_super" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
