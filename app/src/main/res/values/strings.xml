@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Genshin：Advanced Elemental Theory</string>
-    
+
     <string name="navigation_pre_title">Pre-basic knowledge</string>
     <string name="navigation_pre_unit" translatable="false">@string/elemental_amount_unit_title</string>
     <string name="navigation_pre_attach">Elemental Attachment Mechanism</string>
@@ -9,11 +9,13 @@
     <string name="element_attachment_strong">Strong Element Attachment</string>
     <string name="element_attachment_super">Super Element Attachment</string>
 
+    <string name="element_unit" translatable="false">%d EU</string>
+
     <string name="elemental_amount_title">Elemental Measurement Unit</string>
     <string name="elemental_amount_unit_title">Measurement Unit</string>
     <string name="elemental_amount_unit_body">In Genshin Impact elements system, there is no official elemental measurement unit for determining amount of element, like <b><i>mol</i></b> in chemistry in real life.\nSo, we consider using <b><i>Element Unit (EU)</i></b> as the measurement unit by dividing weak elemental attachment into 100 equal pieces, and thus weak elemental attachment is <b><i>100EU</i></b>.</string>
     <string name="elemental_amount_amount_title">Elemental Amount Attached</string>
-    <string name="elemental_amount_amount_body">There are 3 types of element attached amount to target available, <b><i>Weak</i></b>, <b><i>Strong</i></b> and <b><i>Super</i></b>, in ratio <b><i>1:2:4</i></b>.</string>
+    <string name="elemental_amount_amount_body">There are 3 types of elemental attachment to target available, <b><i>Weak</i></b>, <b><i>Strong</i></b> and <b><i>Super</i></b>, in ratio <b><i>1:2:4</i></b>.</string>
     <string name="elemental_amount_amount_weak_title" translatable="false">@string/element_attachment_weak</string>
     <string name="elemental_amount_amount_weak_body" translatable="false"><b><i>100 EU</i></b></string>
     <string name="elemental_amount_amount_strong_title" translatable="false">@string/element_attachment_strong</string>
@@ -23,12 +25,40 @@
     <string name="elemental_amount_decay_title">Decay Rate</string>
     <string name="elemental_amount_decay_body">In normal case, element attached to target has corresponding constant decay rate in <b><i>energy units per second (EU/s)</i></b> until disappear (<b><i>0 EU</i></b>).</string>
     <string name="elemental_amount_decay_weak_title" translatable="false">@string/element_attachment_weak</string>
-    <string name="elemental_amount_decay_weak_body">%d.%d EU, decay in 8 EU/s</string>
+    <string name="elemental_amount_decay_weak_body">%d EU, decay in 8 EU/s</string>
     <string name="elemental_amount_decay_strong_title" translatable="false">@string/element_attachment_strong</string>
-    <string name="elemental_amount_decay_strong_body">%d.%d EU, decay in 13 EU/s</string>
+    <string name="elemental_amount_decay_strong_body">%d EU, decay in 13 EU/s</string>
     <string name="elemental_amount_decay_super_title" translatable="false">@string/element_attachment_super</string>
-    <string name="elemental_amount_decay_super_body">%d.%d EU, decay in 19 EU/s</string>
+    <string name="elemental_amount_decay_super_body">%d EU, decay in 19 EU/s</string>
     <string name="elemental_amount_decay_timer">Timer: %ds</string>
     <string name="elemental_amount_decay_caution">The actual element amount attached to target and decay time spent in game is not exactly the same as shown here. Of course, it will be discussed in later chapter.</string>
+
+    <string name="elemental_attachment_loss_title">Attachment Element Amount Loss</string>
+    <string name="elemental_attachment_loss_body">When element is attached to target, <b><i>20%</i></b> of total attaching element amount is lost, whatever the usage of attachment.</string>
+    <string name="elemental_attachment_loss_weak_title" translatable="false">@string/element_attachment_weak</string>
+    <string name="elemental_attachment_loss_weak_body" translatable="false">100 EU x 80% → <b><i>80 EU</i></b></string>
+    <string name="elemental_attachment_loss_strong_title" translatable="false">@string/element_attachment_strong</string>
+    <string name="elemental_attachment_loss_strong_body" translatable="false">200 EU x 80% → <b><i>160 EU</i></b></string>
+    <string name="elemental_attachment_loss_super_title" translatable="false">@string/element_attachment_super</string>
+    <string name="elemental_attachment_loss_super_body" translatable="false">400 EU x 80% → <b><i>320 EU</i></b></string>
+    <string name="elemental_attachment_refresh_title">Element Attachment Unit Refresh</string>
+    <string name="elemental_attachment_refresh_body">For continuing element attaching to target (<b><i>\>0EU</i></b>), you can refresh with <b><i>same element</i></b> before elemental attachment disappear, but there is no summing up of EU, just refresh to greatest EU of elemental attachment type.</string>
+    <string name="elemental_attachment_refresh_decay_title">Decay rate keeps unchanged</string>
+    <string name="elemental_attachment_refresh_decay_body">The decay rate keeps the same with reference to <b><i>initial elemental attachment type</i></b> until element attachment disappear.</string>
+    <string name="elemental_attachment_refresh_unit_title">Total element unit follows refreshing attachment</string>
+    <string name="elemental_attachment_refresh_unit_body">The refreshed total EU might be increased refers to <b><i>refresher elemental attachment type</i></b>.\nAs a result, it is <b><i>sequence sensitive</i></b>.</string>
+    <string name="elemental_attachment_refresh_example_title">Consider following Conditions</string>
+    <string name="elemental_attachment_refresh_example_a_title">Condition 1</string>
+    <string name="elemental_attachment_refresh_example_a_body"><b><i>Weak</i></b> + <b><i>Weak</i></b> → <b><i>Weak</i></b></string>
+    <string name="elemental_attachment_refresh_example_a_weak_title" translatable="false">@string/element_attachment_weak</string>
+    <string name="elemental_attachment_refresh_example_a_weak_body">Total <b><i>80 EU</i></b>, Decay Rate <b><i>8 EU/s</i></b></string>
+    <string name="elemental_attachment_refresh_example_b_title">Condition 2</string>
+    <string name="elemental_attachment_refresh_example_b_body"><b><i>Weak</i></b> + <b><i>Super</i></b> → <b><i>Weak-decay-rated Super</i></b></string>
+    <string name="elemental_attachment_refresh_example_b_weak_title" translatable="false">@string/element_attachment_weak</string>
+    <string name="elemental_attachment_refresh_example_b_weak_body">Total <b><i>80 EU</i></b>, Decay Rate <b><i>8 EU/s</i></b></string>
+    <string name="elemental_attachment_refresh_example_b_super_title" translatable="false">@string/element_attachment_super</string>
+    <string name="elemental_attachment_refresh_example_b_super_body">Total <b><i>320 EU</i></b>, Decay Rate <b><i>19 EU/s</i></b></string>
+    <string name="elemental_attachment_refresh_example_b_result_title">Weak-decay-rated Super Element Attachment</string>
+    <string name="elemental_attachment_refresh_example_b_result_body">Total <b><i>320 EU</i></b>, Decay Rate <b><i>8 EU/s</i></b></string>
 
 </resources>

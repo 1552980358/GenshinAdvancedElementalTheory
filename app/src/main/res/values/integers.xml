@@ -17,4 +17,8 @@
     <!-- 400 / 19 = 50 s -> 12500 ms -->
     <integer name="element_decay_time_super">21053</integer>
 
+    <integer name="element_amount_attach_weak">80</integer>
+    <integer name="element_amount_attach_strong">160</integer>
+    <integer name="element_amount_attach_super">320</integer>
+
 </resources>

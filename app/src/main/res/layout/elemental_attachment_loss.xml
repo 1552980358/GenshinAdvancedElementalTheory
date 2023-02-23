@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+    android:paddingVertical="@dimen/md_spec_spacing_ver_8"
+    tools:showIn="@layout/fragment_elemental_attachment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elemental_attachment_loss_title"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elemental_attachment_loss_body"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+            android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_loss_weak_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_loss_weak_body"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <projekt.cloud.piece.genshin.elements.widget.ValueBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:maxValue="@integer/element_amount_max"
+                app:primaryValue="@integer/element_amount_attach_weak"
+                app:secondaryValue="@integer/element_amount_weak" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+            android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_loss_strong_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_loss_strong_body"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <projekt.cloud.piece.genshin.elements.widget.ValueBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:maxValue="@integer/element_amount_max"
+                app:primaryValue="@integer/element_amount_attach_strong"
+                app:secondaryValue="@integer/element_amount_strong" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+            android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_loss_super_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_loss_super_body"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <projekt.cloud.piece.genshin.elements.widget.ValueBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:maxValue="@integer/element_amount_max"
+                app:primaryValue="@integer/element_amount_attach_super"
+                app:secondaryValue="@integer/element_amount_super" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+    android:paddingVertical="@dimen/md_spec_spacing_ver_8"
+    tools:showIn="@layout/fragment_elemental_attachment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elemental_attachment_refresh_title"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elemental_attachment_refresh_body"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+            android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_refresh_decay_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_refresh_decay_body"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+            android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_refresh_unit_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_refresh_unit_body"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8"
+        android:text="@string/elemental_attachment_refresh_example_title"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+            android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_refresh_example_a_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/md_spec_spacing_ver_8"
+                android:text="@string/elemental_attachment_refresh_example_a_body"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <include layout="@layout/elemental_attachment_refresh_example_a" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/md_spec_spacing_ver_8"
+                app:srcCompat="@drawable/ic_round_add_24" />
+
+            <include layout="@layout/elemental_attachment_refresh_example_a" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/md_spec_spacing_ver_8"
+                app:srcCompat="@drawable/ic_round_arrow_downward_24" />
+
+            <include layout="@layout/elemental_attachment_refresh_example_a" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/md_spec_spacing_ver_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/md_spec_spacing_hor_16"
+            android:paddingVertical="@dimen/md_spec_spacing_ver_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/elemental_attachment_refresh_example_b_title"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/md_spec_spacing_ver_8"
+                android:text="@string/elemental_attachment_refresh_example_b_body"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <include layout="@layout/elemental_attachment_refresh_example_b_weak" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/md_spec_spacing_ver_8"
+                app:srcCompat="@drawable/ic_round_add_24" />
+
+            <include layout="@layout/elemental_attachment_refresh_example_b_super" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="@dimen/md_spec_spacing_ver_8"
+                app:srcCompat="@drawable/ic_round_arrow_downward_24" />
+
+            <include layout="@layout/elemental_attachment_refresh_example_b_result" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
