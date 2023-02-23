@@ -69,23 +69,20 @@ class ValueBar(context: Context, attributeSet: AttributeSet): View(context, attr
                 R.styleable.ValueBar_secondaryValue,
                 resources.getInteger(R.integer.value_bar_secondary_value_def)
             )
+
+            val typedValue = TypedValue()
+
+            context.theme.resolveAttribute(com.google.android.material.R.attr.colorPrimary, typedValue, true)
+            primaryPaint.color = typedArray.getColor(R.styleable.ValueBar_primaryColor, typedValue.data)
+
+            context.theme.resolveAttribute(com.google.android.material.R.attr.colorSecondary, typedValue, true)
+            secondaryPaint.color = typedArray.getColor(R.styleable.ValueBar_secondaryColor, typedValue.data)
+
+            context.theme.resolveAttribute(com.google.android.material.R.attr.colorSurfaceVariant, typedValue, true)
+            trackPaint.color = typedArray.getColor(R.styleable.ValueBar_trackColor, typedValue.data)
         }
 
         drawValue = primaryValue
-
-        TypedValue().let { typedValue ->
-            // Primary
-            context.theme.resolveAttribute(com.google.android.material.R.attr.colorPrimary, typedValue, true)
-            primaryPaint.color = typedValue.data
-
-            // Secondary
-            context.theme.resolveAttribute(com.google.android.material.R.attr.colorSecondary, typedValue, true)
-            secondaryPaint.color = typedValue.data
-
-            // Track
-            context.theme.resolveAttribute(com.google.android.material.R.attr.colorSurfaceVariant, typedValue, true)
-            trackPaint.color = typedValue.data
-        }
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
