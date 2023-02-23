@@ -6,13 +6,15 @@
     <integer name="element_amount_strong">200</integer>
     <integer name="element_amount_super">400</integer>
 
-    <integer name="element_amount_count_down_max">4000</integer>
-    <integer name="element_amount_count_down_weak">1000</integer>
-    <integer name="element_amount_count_down_strong">2000</integer>
-    <integer name="element_amount_count_down_super">4000</integer>
-
     <integer name="element_decay_weak">8</integer>
     <integer name="element_decay_strong">13</integer>
     <integer name="element_decay_super">19</integer>
+
+    <!-- 100 / 8 = 12.5 s -> 12500 ms -->
+    <integer name="element_decay_time_weak">12500</integer>
+    <!-- 200 / 13 = 25 s -> 25000 ms -->
+    <integer name="element_decay_time_strong">15385</integer>
+    <!-- 400 / 19 = 50 s -> 12500 ms -->
+    <integer name="element_decay_time_super">21053</integer>
 
 </resources>
